@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f7d9ed"><title>KuotaRadar — Promosi Kuota di X</title>
+<style>
+:root{--ink:#573b59;--muted:#89778a;--pink:#e78fbe;--paper:#fff9fd;--line:#edc4dc;--hot:#b83f85;--lav:#e8e3fb;--shadow:0 12px 32px #77507814}
+*{box-sizing:border-box}body{margin:0;color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;background:linear-gradient(135deg,#f8ddeb,#e4defa 55%,#fce5f0);min-height:100vh}button,input,select,textarea{font:inherit}button{cursor:pointer}.wrap{max-width:1000px;margin:auto;padding:20px 14px 50px}.top{display:flex;align-items:center;gap:12px;margin-bottom:18px}.logo{width:48px;height:48px;border-radius:17px;background:#ffe8a9;display:grid;place-items:center;font-size:25px}h1{font-size:clamp(1.6rem,4vw,2.2rem);margin:0;letter-spacing:-.04em}.sub{color:var(--muted);margin:4px 0 0}.panel{background:#fff8fce8;border:1px solid var(--line);border-radius:24px;padding:19px;box-shadow:var(--shadow);margin-bottom:16px}.hero h2{margin:0 0 8px}.hero p,.note{color:var(--muted);line-height:1.6;margin:0}.pill{display:inline-block;border:1px solid var(--line);border-radius:999px;background:#fff5fb;padding:6px 10px;color:var(--hot);font-size:.8rem;font-weight:750}.row{display:flex;gap:9px;flex-wrap:wrap}.field{width:100%;min-width:0;border:1px solid var(--line);background:#fffafd;border-radius:14px;padding:12px 13px;color:var(--ink);outline:none}.field:focus{border-color:var(--hot);box-shadow:0 0 0 3px #e78fbe22}textarea.field{resize:vertical;min-height:125px;line-height:1.55}.btn{border:1px solid var(--line);background:#fff7fc;color:var(--hot);font-weight:750;border-radius:13px;padding:11px 14px}.btn.primary{background:var(--hot);color:#fff;border-color:var(--hot)}.btn.lav{background:var(--lav);color:#66568f;border-color:#d5cdf5}.btn:active{transform:scale(.99)}.label{display:block;font-size:.9rem;font-weight:750;margin:13px 0 7px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.querylist{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:13px}.query{background:#fffafd;border:1px solid var(--line);border-radius:16px;padding:13px}.query strong{display:block;margin-bottom:5px}.query p{font-size:.86rem;color:var(--muted);margin:0 0 10px;line-height:1.45}.query .btn{width:100%}.template{border:1px solid var(--line);background:#fffafd;border-radius:18px;padding:14px}.template h3{margin:0 0 8px;font-size:1rem}.notice{border:1px solid #e5d9f8;background:#f7f3ff;padding:13px 14px;border-radius:15px;color:#66568f;line-height:1.5;font-size:.9rem}.status{font-size:.8rem;color:var(--green,#477a65);margin-top:8px;min-height:1.2em}.footer{text-align:center;color:var(--muted);font-size:.82rem;padding:10px}.hidden{display:none!important}@media(max-width:650px){.grid,.querylist{grid-template-columns:1fr}.panel{padding:15px}.top{align-items:flex-start}}
+</style></head>
+<body><div class="wrap">
+<header class="top"><div class="logo">#</div><div><h1>KuotaRadar</h1><p class="sub">Cari calon pembeli & promosi kuota di X 🌷</p></div></header>
+<section class="panel hero"><span class="pill">Mode pencarian nyata • tanpa API berbayar</span><h2 style="margin-top:12px">Cari orang yang sedang butuh kuota 💗</h2><p>Gunakan tombol di bawah untuk membuka pencarian langsung di X. Pilih tweet asli yang relevan, buka postingannya, lalu gunakan template balasan. Web ini tidak menampilkan tweet palsu atau mengaku mengambil data otomatis.</p></section>
+<section class="panel"><h2 style="margin:0 0 6px">1. Cari postingan asli di X</h2><p class="note">Pilih kata kunci sesuai kebutuhan. X akan menampilkan hasil pencarian nyata; pastikan tab “Terbaru” dipilih jika tersedia.</p>
+<label class="label" for="extra">Kata kunci tambahan (opsional)</label><input id="extra" class="field" placeholder="Contoh: kuota Telkomsel murah">
+<div class="querylist">
+<div class="query"><strong>🔎 Butuh kuota</strong><p>Untuk orang yang sedang mencari kuota internet.</p><button class="btn primary" data-q='"butuh kuota"'>Cari di X ↗</button></div>
+<div class="query"><strong>🛍️ Cari kuota / paket data</strong><p>Untuk percakapan mencari paket internet.</p><button class="btn primary" data-q='"cari kuota" OR "paket data"'>Cari di X ↗</button></div>
+<div class="query"><strong>💬 WTB / ada yang jual</strong><p>Untuk calon pembeli yang menulis ingin membeli.</p><button class="btn primary" data-q='"WTB kuota" OR "ada yang jual" kuota'>Cari di X ↗</button></div>
+<div class="query"><strong>🏷️ Hashtag zonauang</strong><p>Untuk memantau percakapan dengan hashtag target.</p><button class="btn primary" data-q='#zonauang kuota'>Cari di X ↗</button></div>
+<div class="query"><strong>📶 Telkomsel</strong><p>Calon pembeli yang menyebut Telkomsel.</p><button class="btn primary" data-q='("butuh kuota" OR "cari kuota") Telkomsel'>Cari di X ↗</button></div>
+<div class="query"><strong>📶 XL / AXIS / Tri / Indosat</strong><p>Ganti provider di pencarian sesuai targetmu.</p><button class="btn primary" data-q='("butuh kuota" OR "cari kuota") (XL OR AXIS OR Tri OR Indosat)'>Cari di X ↗</button></div>
+</div><p class="note" style="margin-top:12px">Tip: kalau pencarian terlalu ramai, tambahkan provider atau kota. Jangan membalas tweet yang tidak relevan; hindari spam dan ikuti aturan X.</p></section>
+<section class="panel"><h2 style="margin:0 0 6px">2. Balas calon pembeli</h2><p class="note">Edit bila perlu, lalu salin. Buka tweet aslinya di X dan tempel balasan secara manual.</p>
+<div class="grid" style="margin-top:14px">
+<div class="template"><h3>Balasan ramah</h3><textarea id="reply1" class="field">Kak, lagi cari kuota internet yaa? 👀 Aku bisa bantu cek pilihan paket nih. Pakai provider apa dan butuh berapa GB? Nanti aku bantu carikan yang cocok 💗</textarea><button class="btn primary copy" data-id="reply1" style="margin-top:9px">Salin balasan</button><div class="status" aria-live="polite"></div></div>
+<div class="template"><h3>Balasan singkat</h3><textarea id="reply2" class="field">Kak, kalau masih cari kuota aku bantu cek yaa 🫶 Provider apa dan butuh berapa GB nih?</textarea><button class="btn primary copy" data-id="reply2" style="margin-top:9px">Salin balasan</button><div class="status" aria-live="polite"></div></div>
+</div></section>
+<section class="panel"><h2 style="margin:0 0 6px">3. Buat postingan promosi</h2><p class="note">Pilih dan edit promosi yang ingin kamu bagikan ke akun X milikmu.</p>
+<label class="label" for="promo">Template promosi</label><select id="promo" class="field"><option value="soft">Soft selling</option><option value="direct">Promosi langsung</option><option value="thread">Format kebutuhan pembeli</option></select>
+<label class="label" for="promoText">Teks promosi (bisa diedit)</label><textarea id="promoText" class="field">Lagi cari kuota internet harian atau bulanan? 📱💗
+
+Boleh tanya pilihan paket yang tersedia yaa!
+Info provider + kebutuhan GB bisa DM atau reply di sini 🫶
+
+#zonauang #kuotainternet</textarea>
+<div class="row" style="margin-top:10px"><button id="copyPromo" class="btn primary">Salin promosi</button><button id="postX" class="btn lav">Buka X untuk posting ↗</button></div><p class="note" style="margin-top:10px">Tombol posting membuka X; untuk keamanan akun, kamu tetap meninjau dan menerbitkan postingan sendiri. Harga/stok tidak dikarang oleh web ini.</p><div id="promoStatus" class="status" aria-live="polite"></div>
+</section>
+<section class="panel"><h2 style="margin:0 0 10px">4. Simpan kata kunci favorit</h2><label class="label" for="keywords">Kata kunci pribadi (pisahkan koma)</label><textarea id="keywords" class="field">butuh kuota, cari kuota, paket data, WTB kuota, kuota internet, #zonauang</textarea><div class="row" style="margin-top:10px"><button id="save" class="btn">Simpan di perangkat</button><button id="searchSaved" class="btn primary">Cari kata kunci ini di X ↗</button></div><p id="saveStatus" class="status" aria-live="polite"></p></section>
+<footer class="footer">KuotaRadar 🌸 • Gratis tanpa API berbayar • Tweet dicari langsung di X</footer>
+</div>
+<script>
+const $=id=>document.getElementById(id);
+function xSearch(q){const extra=$("extra").value.trim();if(extra)q="("+q+") "+extra;window.open("https://x.com/search?q="+encodeURIComponent(q)+"&src=typed_query&f=live","_blank","noopener,noreferrer")}
+document.querySelectorAll("[data-q]").forEach(b=>b.addEventListener("click",()=>xSearch(b.dataset.q)));
+async function copyText(text, statusEl, button){try{await navigator.clipboard.writeText(text);statusEl.textContent="Berhasil disalin 💗";}catch(e){const t=document.createElement("textarea");t.value=text;document.body.appendChild(t);t.select();document.execCommand("copy");t.remove();statusEl.textContent="Teks disalin 💗";}if(button){const old=button.textContent;button.textContent="Tersalin ✓";setTimeout(()=>button.textContent=old,1400)}}
+document.querySelectorAll(".copy").forEach(b=>b.addEventListener("click",()=>copyText($(b.dataset.id).value,b.parentElement.querySelector(".status"),b)));
+const templates={soft:"Lagi cari kuota internet harian atau bulanan? 📱💗\n\nBoleh tanya pilihan paket yang tersedia yaa!\nInfo provider + kebutuhan GB bisa DM atau reply di sini 🫶\n\n#zonauang #kuotainternet",direct:"OPEN KUOTA INTERNET 📶✨\n\nTanya pilihan paket sesuai provider dan kebutuhanmu.\nHarga dan detail akan dikonfirmasi sebelum transaksi.\n\nMinat? DM dengan format:\nProvider:\nKebutuhan GB:\nBudget:\n\n#zonauang #kuota",thread:"Lagi cari kuota? Spill kebutuhanmu yaa 💗\n\n📱 Provider:\n📦 Butuh berapa GB:\n💸 Budget:\n\nAku bantu cek pilihan paket yang tersedia. Tanya dulu boleh kok 🫶\n\n#zonauang #kuotainternet"};
+$("promo").addEventListener("change",()=>{$("promoText").value=templates[$("promo").value]});
+$("copyPromo").addEventListener("click",()=>copyText($("promoText").value,$("promoStatus"),$("copyPromo")));
+$("postX").addEventListener("click",()=>{copyText($("promoText").value,$("promoStatus"),null);window.open("https://x.com/compose/post","_blank","noopener,noreferrer")});
+$("save").addEventListener("click",()=>{localStorage.setItem("kr_real_keywords",$("keywords").value);$("saveStatus").textContent="Kata kunci tersimpan di browser ini 💗"});
+$("searchSaved").addEventListener("click",()=>{const q=$("keywords").value.split(/[,\n]/).map(x=>x.trim()).filter(Boolean).slice(0,8).map(x=>'"'+x+'"').join(" OR ");xSearch("("+q+")")});
+const saved=localStorage.getItem("kr_real_keywords");if(saved)$("keywords").value=saved;
+</script></body></html>
